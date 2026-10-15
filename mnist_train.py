@@ -59,7 +59,7 @@ class MNISTModel(nn.Module):
         self.network = nn.Sequential(
             nn.Flatten(),             # 28×28 展平成 784 个数
             nn.Linear(28 * 28, 128),  # 输入层 -> 隐藏层
-            nn.ReLU(),                # 激活函数
+            nn.ReLU(),                # 激活函数，ReLU(x)=max(0,x)
             nn.Linear(128, 64),       # 隐藏层
             nn.ReLU(),
             nn.Linear(64, 10)         # 输出数字 0～9 的分数
